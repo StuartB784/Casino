@@ -69,8 +69,50 @@ namespace Casino
                     ns = new MenuScreen();
                     break;
                 case "GameScreen":
-                   // cardPicker();
+                    //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    cardPicker();
                     ns = new GameScreen();
+
                     break;
                 case "ScoreScreen":
                     ns = new ScoreScreen();

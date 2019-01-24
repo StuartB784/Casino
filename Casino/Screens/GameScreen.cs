@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GameSystemServices;
 using System.Media;
-
+//Nathan BrookShaw and Conall Gillett   
+// Jan 24, 2019
 namespace Casino
 {
 
     public partial class GameScreen : UserControl
     {
+        // declares variables
         Random randGen = new Random();
         int valuesInt;
         int numbersInt;
@@ -24,8 +26,6 @@ namespace Casino
         int dealerTotal=0;
         int money = 50;
         int chipTotal = 0;
-       
-
         List<int> cardValues = new List<int>(new int[] {1,2,3,4,5,6,7,8,9,10,10,10,10,
                                                   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10 ,
                                                   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10 ,
@@ -34,18 +34,10 @@ namespace Casino
                                                          14, 15, 16, 17, 18, 19, 20, 21, 22, 23,24, 25,26
                                                          ,27,28,29,30,31,32,33, 34,35,36,37,38,39,
                                                              40,41,42,43,44,45,46,47,48,49,50,51,52 });
-       /* List<string> cards = new List<string>(new string[]{"H", "H", "H", "H", "H", "H", "H", "H", "H", "H", "H", "H", "H",
-                                                           "D", "D", "D", "D", "D", "D", "D", "D", "D", "D", "D", "D", "D",
-                                                           "S", "S", "S", "S", "S", "S", "S", "S", "S", "S", "S", "S", "S",
-                                                           "C","C","C","C","C","C","C","C","C","C","C","C","C"}); */
         List<int> playerHand = new List<int>(new int[] { });
         List<int> dealerHand = new List<int>(new int[] { });
 
 
-
-        /*  List<int> cardvaluesUsed = new List<int>();
-          List<int> cardnumbersUsed = new List<int>();
-          List<string> cardsUsed = new List<string>(); */
         //player1 button control keys - DO NOT CHANGE
         Boolean leftArrowDown, downArrowDown, rightArrowDown, upArrowDown, bDown, nDown, mDown, spaceDown;
 
@@ -61,6 +53,7 @@ namespace Casino
         {  
             while (dealerTotal < 17)
             {
+                //declares variables and adds and takes away from lists
                 int rand = randGen.Next(0, cardNumber.Count());
                 numbersInt = cardNumber[rand];
                 valuesInt = cardValues[rand];
